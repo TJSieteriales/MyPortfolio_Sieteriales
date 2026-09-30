@@ -149,7 +149,7 @@ function App() {
 
           <div className="about-grid">
             <div className="about-card">
-              <h3>Who I Am</h3>
+              <h3>Who am I</h3>
               <p>
                 I am a Computer Science student with growing experience in
                 frontend and backend development. My work focuses on building
@@ -381,13 +381,22 @@ function App() {
 
             <div className="contact-card email-box">
               <p className="email-label">Professional Email</p>
+
               <h3>{email}</h3>
+
               <p className="email-note">
-                Hover-style information card for direct professional contact.
+                For project collaborations, freelance work, or development
+                opportunities, feel free to contact me directly.
               </p>
 
               <div className="email-hover-card">
-                <strong>Email Me</strong>
+                <strong>Work With Me</strong>
+
+                <p>
+                  Have a project, collaboration, or opportunity in mind? Send me
+                  an email and let&apos;s discuss how we can work together.
+                </p>
+
                 <span>{email}</span>
               </div>
             </div>
