@@ -35,3 +35,24 @@ img {
 #root {
   min-height: 100vh;
 }
+
+/* Custom Chatbase Widget Styling */
+#chatbase-bubble-window,
+iframe[src*="chatbase.co"] {
+  border: 1.5px solid #ff4500 !important;
+  border-radius: 16px !important;
+  box-shadow: 0 8px 24px rgba(5, 3, 2, 0.25) !important;
+  overflow: hidden !important;
+}
+
+/* Custom orange scrollbar inside the chat frame */
+iframe[src*="chatbase.co"]::-webkit-scrollbar {
+  width: 6px;
+}
+iframe[src*="chatbase.co"]::-webkit-scrollbar-thumb {
+  background: #2a2a2a;
+  border-radius: 3px;
+}
+iframe[src*="chatbase.co"]::-webkit-scrollbar-thumb:hover {
+  background: #ff4500;
+}
