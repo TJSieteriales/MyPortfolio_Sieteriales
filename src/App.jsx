@@ -27,49 +27,6 @@ function App() {
     live: walangBrownoutLiveUrl,
   };
 
-  const projects = [
-    {
-      title: "React System with Browser",
-      tech: "React • Vite • React Router • Bootstrap",
-      link: "https://github.com/TJSieteriales/ReactSysstemwithBrowserSieteriales",
-    },
-    {
-      title: "Fetch Use Repo",
-      tech: "React • Vite • Bootstrap",
-      link: "https://github.com/TJSieteriales/FetchUseRepo",
-    },
-    {
-      title: "FrontEnd Repository",
-      tech: "React • Vite • Axios",
-      link: "https://github.com/TJSieteriales/FrontEndRepository",
-    },
-    {
-      title: "BackEnd Laravel",
-      tech: "Laravel • PHP",
-      link: "https://github.com/TJSieteriales/BackEndLaravel",
-    },
-    {
-      title: "Computer Cafe Station Management System",
-      tech: "Web Application",
-      link: "https://github.com/TJSieteriales/CompCafeStationManagementSystemSieteriales",
-    },
-    {
-      title: "REST API Sieteriales",
-      tech: "REST API",
-      link: "https://github.com/TJSieteriales/RestAPiSieteriales",
-    },
-    {
-      title: "Week 12 Sieteriales",
-      tech: "Applications Development",
-      link: "https://github.com/TJSieteriales/Week12Sieteriales",
-    },
-    {
-      title: "React Repository",
-      tech: "React Fundamentals",
-      link: "https://github.com/TJSieteriales/ReactRepo",
-    },
-  ];
-
   return (
     <div className="site-shell">
       <nav className="top-nav">
@@ -81,7 +38,7 @@ function App() {
           <a href="#home">Home</a>
           <a href="#about">About</a>
           <a href="#featured">Featured</a>
-          <a href="#projects">Projects</a>
+          <a href="#achievements">Skills</a>
           <a href="#contact">Contact</a>
         </div>
       </nav>
@@ -106,7 +63,7 @@ function App() {
 
             <div className="hero-buttons">
               <a
-                href="https://github.com/TJSieteriales"
+                href={githubUrl}
                 target="_blank"
                 rel="noreferrer"
                 className="btn btn-primary"
@@ -241,27 +198,6 @@ function App() {
           </div>
         </section>
 
-        {/* PROJECTS */}
-        <section className="content-section" id="projects">
-          <div className="section-header">
-            <p className="eyebrow">PROJECTS</p>
-            <h2>Other Repositories</h2>
-          </div>
-
-          <div className="project-grid">
-            {projects.map((project) => (
-              <article className="project-card" key={project.title}>
-                <h3>{project.title}</h3>
-                <p>{project.tech}</p>
-
-                <a href={project.link} target="_blank" rel="noreferrer">
-                  View Repository →
-                </a>
-              </article>
-            ))}
-          </div>
-        </section>
-
         {/* SKILLS / ACHIEVEMENTS */}
         <section className="content-section" id="achievements">
           <div className="section-header center">
@@ -272,7 +208,7 @@ function App() {
           <div className="achievement-grid">
             <div className="achievement-card">
               <strong>8+</strong>
-              <span>Academic / Coursework Repositories</span>
+              <span>Projects Built</span>
             </div>
 
             <div className="achievement-card">
@@ -291,44 +227,40 @@ function App() {
             </div>
           </div>
 
-          <div className="skill-bars">
-            <div className="skill-item">
-              <div className="skill-label">
-                <span>React / Frontend</span>
-                <span>85%</span>
-              </div>
-              <div className="skill-track">
-                <div className="skill-fill skill-fill-85"></div>
-              </div>
-            </div>
-
-            <div className="skill-item">
-              <div className="skill-label">
-                <span>Laravel / Backend</span>
-                <span>75%</span>
-              </div>
-              <div className="skill-track">
-                <div className="skill-fill skill-fill-75"></div>
+          <div className="skillset">
+            <div className="skillset-group">
+              <h3>Frontend</h3>
+              <div className="skill-tags">
+                <span>React</span>
+                <span>Vite</span>
+                <span>React Router</span>
+                <span>Bootstrap</span>
+                <span>Axios</span>
+                <span>Responsive Design</span>
               </div>
             </div>
 
-            <div className="skill-item">
-              <div className="skill-label">
-                <span>API Integration</span>
-                <span>80%</span>
-              </div>
-              <div className="skill-track">
-                <div className="skill-fill skill-fill-80"></div>
+            <div className="skillset-group">
+              <h3>Backend</h3>
+              <div className="skill-tags">
+                <span>Laravel</span>
+                <span>PHP</span>
+                <span>REST APIs</span>
               </div>
             </div>
 
-            <div className="skill-item">
-              <div className="skill-label">
-                <span>Git / GitHub</span>
-                <span>82%</span>
+            <div className="skillset-group">
+              <h3>Database</h3>
+              <div className="skill-tags">
+                <span>MySQL</span>
               </div>
-              <div className="skill-track">
-                <div className="skill-fill skill-fill-82"></div>
+            </div>
+
+            <div className="skillset-group">
+              <h3>Tools</h3>
+              <div className="skill-tags">
+                <span>Git</span>
+                <span>GitHub</span>
               </div>
             </div>
           </div>
@@ -345,8 +277,8 @@ function App() {
             <div className="contact-card">
               <h3>Connect With Me</h3>
               <p>
-                You can visit my GitHub, explore my repositories, or send me an
-                email through Gmail.
+                You can visit my GitHub profile or send me an email through
+                Gmail.
               </p>
 
               <div className="contact-buttons">
@@ -357,15 +289,6 @@ function App() {
                   className="btn btn-secondary"
                 >
                   GitHub
-                </a>
-
-                <a
-                  href="https://github.com/TJSieteriales?tab=repositories"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn btn-secondary"
-                >
-                  Repositories
                 </a>
 
                 <a
